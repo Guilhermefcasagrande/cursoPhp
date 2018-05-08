@@ -1,0 +1,53 @@
+/* 
+Theme Name: Curso WP
+Theme Uri: https://github.com/Guilhermefcasagrande/cursoPhp
+Description: Templete do curso de wordpress
+Author: Guilherme F Casagrande
+Author URI: https://github.com/Guilhermefcasagrande/cursoPhp
+Version: 1.0
+*/
+body{
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+}
+.header{
+    height: 600px;
+    background: url('assets/images/header-fundo.jpg') center top;
+    padding: 10px 0px;
+}
+.header h1{margin: 0;}
+.header h1 a{
+    color: #fff;
+    text-decoration: none;
+}
+.header .info{
+    padding-top: 120px;
+    margin: 0 auto;
+    width: 860px;
+    text-align: center;
+}
+.header .info h2{
+    color: #fff;
+    font-size: 30px;
+}
+.header .info p{
+    color: #fff;
+    font-weight: lighter;
+    font-size: 20px;
+}
+.wrap{
+    margin: 0 auto;
+    width: 960px;
+}
+.custom-botao{
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #60d3b1;
+    color: #fff;
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 339px;
+}
