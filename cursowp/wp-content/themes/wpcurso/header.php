@@ -15,12 +15,20 @@
         <div class="wrap">
             <h1><a href="<?php echo site_url();?>" title="<?php bloginfo('name'); ?>">GuilhermeFC</a></h1>
             <div class="info">
-                <h2>Lorem ipsum dolor</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                Provident labore dignissimos delectus quia corrupti nobis numquam 
-                voluptates aut explicabo! Fugit eligendi necessitatibus tempore corrupti, 
-                aliquid beatae deleniti inventore reiciendis esse?</p>
-                <a href="#" class="custom-botao">Leia Mais</a>
+
+                <?php 
+                    $args = array('post_type' => 'page', 'pagename' => 'sobre');
+                    $my_page = get_posts($args);
+                ?>
+                <?php if ($my_page): foreach ($my_page as $post): setup_postdata($post); ?>
+                    <h2><?php the_title(); ?></h2>
+                    <?php the_excerpt(); ?>
+                    <a href="<?php the_permalink(); ?>" class="custom-botao">Leia Mais</a>
+                <?php endforeach; ?>
+
+                <?php else:?>
+                <p>Nenhum conteúdo inserido na página sobre.</p>
+                <?php endif; ?>
             </div>
         </div>
     </div>
